@@ -7,13 +7,3 @@ lib:
 plugins: drepecado
 
 scaffold == andamiaje
-
-rails generate scaffold Product brand:string category:string name:string description:text price:float
-
-
-diseño por convención
-modelo en singular
-class CamelCase
-var snakeCase
-tabla en plural
-controladores en plural
