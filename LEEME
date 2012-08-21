@@ -1,3 +1,4 @@
+**Dia1**
 helpers:
  extraer funcionalidad compleja de las vistas
 
@@ -11,9 +12,31 @@ scaffold == andamiaje
 rails generate scaffold Product brand:string category:string name:string description:text price:float
 
 
-diseño por convención
+*diseño por convención*
 modelo en singular
 class CamelCase
 var snakeCase
 tabla en plural
 controladores en plural
+
+DEBERES:
+
+Tocar colores y estilos
+products.css
+./app/views/products/show.html.erb
+./app/views/products/new.html.erb
+./app/views/products/index.html.erb
+./app/views/products/_form.html.erb
+./app/views/products/edit.html.erb
+./app/views/layouts/application.html.erb
+
+Scaffold====
+Review
+summary:string
+descrtiption:text
+rating:int
+
+rails generate scaffold Review summary:string description:text rating:int
+
+**Dia2**
+
