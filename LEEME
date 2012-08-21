@@ -36,7 +36,7 @@ summary:string
 descrtiption:text
 rating:int
 
-rails generate scaffold Review summary:string description:text rating:int
+rails generate scaffold Review summary:string description:text rating:1..5
 
 **Dia2**
 
