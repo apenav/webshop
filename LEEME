@@ -91,7 +91,7 @@ controlador:= pequeño; según lo que me pide el usuario voy a ver qué modelo l
    -> csrf_meta_tags evita robos de sesión por cookie
  - @variable_de_instancia.each do |iterador|
  - (1..10).each do |contador| { puts "#{@contador}" }
- - en una vista, if, each, link, forms y código html -> no se asignan variables
+ - en una vista, if, each, link, forms, images y código html -> no se asignan variables
  - PROHIBIDO en una vista usar @ (acoplamiento y cohesión) pq esperamos que nos venga de fuera
  - (acoplamiento: cada bloque de código debería saber lo mínimo posible de los demás) no se puede reutilizar
  - (cohesión: cada bloque de código solo debería hacer una cosa)
@@ -102,7 +102,18 @@ controlador:= pequeño; según lo que me pide el usuario voy a ver qué modelo l
     <%= render @products %> ----> si product es un conjunto, llama para cada instancia al partial con su nombre - es equiv a un bucle each
     <%= render "form", variable: valor %> ----> le pasamos una variable al partial
  * Poner enlaces link_to
+   con ayuda de "rake routes" que dice los paths
+   'http://google.com'
+   parámetros que se le pasa para que lo interprete: _blank, class
+   image_tag
  * Usar formularios forms
+    for_form
+     text_field
+     text_area
+     combo
+     fecha- js de calendario (TIP)
+     submit
+     label --> si se asocia helper de control de errores, asociando clase fill_with_error
  * Ruby <% ó <%=
 
  - edit y new son idénticos solo que uno está relleno; cambian el destino del form
