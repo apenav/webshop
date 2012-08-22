@@ -1,7 +1,21 @@
 <h1>Listing products</h1>
 
+<table>
+  <tr>
+    <th>Brand</th>
+    <th>Category</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
 <%= render(@products) || 'There are no products available.' %>
+
+</table>
 
 <br />
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path, :class=>'operation' %>

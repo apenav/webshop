@@ -1,16 +1,4 @@
-<table>
-  <tr>
-    <th>Brand</th>
-    <th>Category</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @products.each do |product| %>
   <tr>
     <td><%= product.brand %></td>
     <td><%= product.category %></td>
@@ -21,5 +9,3 @@
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>
-</table>
