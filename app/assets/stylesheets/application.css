@@ -26,3 +26,6 @@ $margin: 16px;
   border-color: $blue;
 }
 
+.menu {
+  background-color: $blue;
+}
