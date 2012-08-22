@@ -1,9 +1,135 @@
+**Dia1**
 helpers:
  extraer funcionalidad compleja de las vistas
 
 lib:
  equiv a ,jar
 
-plugins: drepecado
+plugins: deprecado
 
 scaffold == andamiaje
+
+rails generate scaffold Product brand:string category:string name:string description:text price:float
+
+
+*diseño por convención*
+modelo en singular
+class CamelCase
+var snakeCase
+tabla en plural
+controladores en plural
+
+DEBERES:
+
+Tocar colores y estilos
+products.css
+./app/views/products/show.html.erb
+./app/views/products/new.html.erb
+./app/views/products/index.html.erb
+./app/views/products/_form.html.erb
+./app/views/products/edit.html.erb
+./app/views/layouts/application.html.erb
+
+Scaffold====
+Review
+summary:string
+description:text
+rating:int
+
+rails generate scaffold Review summary:string description:text rating:1..5
+
+**Dia2**
+
+chef
+sinatra - si más de 3 ficheros, mal ¿rehaces ror?
+test unitarios, integración, aceptación, funcionales
+rspec
+cucumber
+opinativo/dogmático: todo el mundo hace las cosas igual; seguir las convenciones
+
+Freelance ¿maillist de freelances?
+http://workingwithrails.com/browse/companies/country/Spain
+The Cocktail
+linkingpaths
+bebanjo
+vizzuality
+ideas4all
+linkia (Valencia)
+beecoder (Sevilla)
+aentos (Canaria)
+foton (Canaria)
+baruco (Barcelona)
+
+se pide testing y unix
+
+
+VISTAS
+- MVC: separar para ahorrar interacciones; pero esto es web
+vista:= representación de tus datos: para el browser o mashups (si es b2b)
+modelo:= lógica de negocio (tb notificaciones; comprobaciones) + acceso a bd
+controlador:= pequeño; según lo que me pide el usuario voy a ver qué modelo lo gestiona y quién (y cómo) lo pinta
+
+- layout -- plantilla: formato de página común
+   - application.html.erb
+   (yield := ceder)
+   - help.html.erb := p.ej. un layout específico para menús de ayuda
+   - products.html.erb := específico de este modelo
+- partials -- fragmento  de código html reutilizado
+    - _layout-logado.html.erb
+    - _layout-nologado.html.erb
+    - _layout-listado_repetitivo.html.erb
+   (render := pinta, lanza un popup)
+   **Intentar que las vistas quepan en una sola pantalla**
+   **por claridad sacar abstracciones de vistas en otras pantallas**
+- assets:= recursos de estáticos en fichero
+ stylesheet_link_tag:= busca la css "application" y la incluye
+ las css se cachean por nombre: rails les añade body=1 ó un hash
+ ASPGEMS: usa solo dos hojas de estilos:
+   - tamaños, colores, tipos de fuente
+   - posicionamiento y cajas
+   -> no usan coffeescript
+   -> csrf_meta_tags evita robos de sesión por cookie
+ - @variable_de_instancia.each do |iterador|
+ - (1..10).each do |contador| { puts "#{@contador}" }
+ - en una vista, if, each, link, forms, images y código html -> no se asignan variables
+ - PROHIBIDO en una vista usar @ (acoplamiento y cohesión) pq esperamos que nos venga de fuera
+ - (acoplamiento: cada bloque de código debería saber lo mínimo posible de los demás) no se puede reutilizar
+ - (cohesión: cada bloque de código solo debería hacer una cosa)
+
+
+ * Incluir un partial
+    <%= render "form" %> ----> partial en la misma carpeta donde está la vista
+    <%= render @products %> ----> si product es un conjunto, llama para cada instancia al partial con su nombre - es equiv a un bucle each
+    <%= render "form", variable: valor %> ----> le pasamos una variable al partial
+ * Poner enlaces link_to
+   con ayuda de "rake routes" que dice los paths
+   'http://google.com'
+   parámetros que se le pasa para que lo interprete: _blank, class
+   image_tag
+ * Usar formularios forms
+    for_form
+     text_field
+     text_area, cols: , lines:
+     combo
+     fecha- js de calendario (TIP)
+     submit
+     label --> si se asocia helper de control de errores, asociando clase fill_with_error
+ * Ruby <% ó <%=
+
+ - edit y new son idénticos solo que uno está relleno; cambian el destino del form
+
+
+ DEBERES: partial del modelo review con un menú
+ : refactorizar los dos scaffolds
+ : campos de tipo texto que solo 50 chars, o tipo number
+ : guides.rubyonrails.org
+  layouts and rendering
+  forms
+ : github
+
+**Dia3**
+**Dia4**
+**Dia5**
+**Dia6**
+
+
