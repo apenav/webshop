@@ -3,9 +3,9 @@
 one:
   summary: MyString
   description: MyText
-  rating: 
+  rating: 1
 
 two:
   summary: MyString
   description: MyText
-  rating: 
+  rating: 1
