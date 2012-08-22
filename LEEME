@@ -109,7 +109,7 @@ controlador:= pequeño; según lo que me pide el usuario voy a ver qué modelo l
  * Usar formularios forms
     for_form
      text_field
-     text_area
+     text_area, cols: , lines:
      combo
      fecha- js de calendario (TIP)
      submit
@@ -117,6 +117,15 @@ controlador:= pequeño; según lo que me pide el usuario voy a ver qué modelo l
  * Ruby <% ó <%=
 
  - edit y new son idénticos solo que uno está relleno; cambian el destino del form
+
+
+ DEBERES: partial del modelo review con un menú
+ : refactorizar los dos scaffolds
+ : campos de tipo texto que solo 50 chars, o tipo number
+ : guides.rubyonrails.org
+  layouts and rendering
+  forms
+ : github
 
 **Dia3**
 **Dia4**
