@@ -15,9 +15,9 @@ $blue: #3bbfce;
 $margin: 16px;
 
 .content-navigation {
-  border-color: $blue;
+  border-color: blue;
   color:
-    darken($blue, 9%);
+    darken(blue, 9%);
 }
 
 .border {
@@ -27,5 +27,5 @@ $margin: 16px;
 }
 
 .menu {
-  background-color: $blue;
+  background-color: blue;
 }
