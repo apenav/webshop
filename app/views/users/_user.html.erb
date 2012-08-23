@@ -2,6 +2,32 @@
     <td><%= user.first_name %></td>
     <td><%= user.last_name %></td>
     <td><%= user.email %></td>
+     <td>
+	     <table>
+	     <tr>
+	     <th>Summary</th>
+	     <th>Description</th>
+	     <th>Rating</th>
+	     <th></th>
+	     <th></th>
+	     <th></th>
+	     </tr>
+
+	     <tr>
+	     	<td> <% user.reviews.each do |review| %>
+	        <tr>
+	          <td><%= review.summary %></td>
+	          <td><%= review.description %></td>
+	          <td><%= review.rating %></td>
+		   </tr>
+		<% end %>
+		</table>
+	</td>
+	     <tr>
+	     	<td> </td>
+         </tr>
+
+    <td> <!--%= render(user.reviews) || 'There are no reviews available.' %--> </td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
