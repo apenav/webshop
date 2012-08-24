@@ -1,5 +1,6 @@
 Webshop::Application.routes.draw do
-  resources :sessions
+  
+  resources :sessions, :only => [:create, :destroy]
 
   resources :users
 
