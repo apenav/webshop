@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<% if session[:user_id] %>
-	<p> Eres el usuario <%= session[:user_id] %></p>
+<% if logged_in? %>
+	<p> Eres el usuario <%= current_user.email %></p>
 <% else %>
     haz login  en <%= link_to "este enlace", new_session_path %>
 <% end %>
