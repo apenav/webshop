@@ -12,7 +12,7 @@ class Product < ActiveRecord::Base
 
   validate :validate_expensive_price, :validate_free_category_price_free
 
-  before_save : fill_description
+  before_save :fill_description
 
   def validate_expensive_price
   	if brand == "Apple" && price < 2300
@@ -32,6 +32,7 @@ class Product < ActiveRecord::Base
     if description.blank?
     	self.description = name
     end
+  end
 
   has_many :reviews
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120823191924) do
+ActiveRecord::Schema.define(:version => 20120824150923) do
 
   create_table "products", :force => true do |t|
     t.string   "brand"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(:version => 20120823191924) do
     t.string   "name"
     t.text     "description"
     t.float    "price"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "reviews_count"
   end
 
   create_table "reviews", :force => true do |t|
