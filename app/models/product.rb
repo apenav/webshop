@@ -12,6 +12,8 @@ class Product < ActiveRecord::Base
 
   validate :validate_expensive_price, :validate_free_category_price_free
 
+  before_save : fill_description
+
   def validate_expensive_price
   	if brand == "Apple" && price < 2300
   		errors[:base] << "Seguro que es imitacion" # error de todo el formulario
@@ -25,11 +27,11 @@ class Product < ActiveRecord::Base
   	end
   end
 
-  def validate_existence_blanks_category
-  	if category == "Gratis" && price > 0
-  		errors[:base] << "El precio debe ser cero"             # marca el campo de error en rojo
-  	end
-  end
+
+  def fill_description
+    if description.blank?
+    	self.description = name
+    end
 
   has_many :reviews
 end
