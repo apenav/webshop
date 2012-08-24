@@ -11,6 +11,11 @@ class Review < ActiveRecord::Base
 
   belongs_to :product, :counter_cache => true
   #belongs_to :product, :counter_cache => :reviews_count
-  
+
+  def description_bonita
+  	"#{description} #{product.name}"
+  end
+
+
   belongs_to :user
 end

@@ -35,4 +35,10 @@ class Product < ActiveRecord::Base
   end
 
   has_many :reviews
+
+  # has_many :reviews, :dependent => :destroy
+  # has_many :reviews, :dependent => :nullify
+  # has_many :reviews, :dependent => :ignore
+  # has_many :reviews, :dependent => :restrict
+  
 end
