@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<% if session[:user_id] %>
+	<p> Eres el usuario <%= session[:user_id] %></p>
+<% else %>
+    haz login  en <%= link_to "este enlace", new_session_path %>
+<% end %>
+
+
 <div id="menu">Menu items here
 <%= render partial: "/layouts/menu"%>
 </div>

@@ -18,6 +18,11 @@ class SessionsController < ApplicationController
   	@user = User.find_by_email(params[:email])
   	if @user && @user.authenticate(params[:password])
   		session[:user_id] = @user.id
+      redirect_to products_path
+    else
+      flash[:error] = "Error clasico"
+      flash.now.notice = "Password incorrecta"
+      render :new
   	end
   end
 
