@@ -9,7 +9,7 @@
 <body>
 
 <% if logged_in? %>
-	<p> Eres el usuario <%= current_user.email %></p>
+	<p> Eres el usuario <%= "email: #{current_user.email} |  nombre: #{current_user.first_name} "%></p>
 <% else %>
     haz login  en <%= link_to "este enlace", new_session_path %>
 <% end %>
