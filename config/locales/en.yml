@@ -3,3 +3,13 @@
 
 en:
   hello: "Hello world"
+  otro:
+    hello_again: 'Hello world... again'
+  global:
+    welcome: "Welcome %{user_name}"
+    welcome2: "Welcome %{user_name}. You have %{count_reviews}"
+  products:
+    show:
+      one: "Producto %{product_name}. It has one product"
+      other: "Producto %{product_name}. It has %{reviews_product} products"
+

@@ -1,5 +1,7 @@
 <p> Eres el usuario <%= session[:user_id] %></p>
 
+<p> <% t('other:hello_again') %></p>
+
 <h1>Log in</h1>
 
 <%= form_tag sessions_path do %>

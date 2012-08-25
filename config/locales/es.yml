@@ -1,0 +1,11 @@
+es:
+  hello: "Hola mundo"
+  activerecord:
+    errors:
+      models:
+        product:
+          show:
+            title: "F"
+          attributes:
+            d: D
+
