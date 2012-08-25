@@ -2,7 +2,15 @@ Webshop::Application.routes.draw do
 
   resources :sessions#, :only => [:create, :destroy]
 
-  resources :users
+  root :to => 'products#index'
+
+  get 'signup' => "users#new", :as => "new_user"
+
+  get 'login' => "sessions#new", :as => "new_sessions"
+
+  get 'logout' => "sessions#destroy", :as => "delete_sessions"
+
+  resources :users, :except => [:new]
 
   resources :reviews
 
