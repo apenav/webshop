@@ -22,8 +22,16 @@ Webshop::Application.routes.draw do
       put 'publish_all'
       put 'unpublish_all'
     end
-   resources :reviews
+    collection do
+      delete 'delete_all'
+    end
+    resources :reviews, :except => [:show, :destroy]
   end
+
+  resources :reviews, :only => [:index, :show, :destroy]
+
+  # get 'reviews' => "reviews_controller#index" # alternativa
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
