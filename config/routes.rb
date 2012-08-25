@@ -12,9 +12,18 @@ Webshop::Application.routes.draw do
 
   resources :users, :except => [:new]
 
-  resources :reviews
 
-  resources :products
+  resources :products do
+    member do
+      put 'publish' #put_on_sale'
+      put 'unpublish' #quit_for_sale'
+    end
+    collection do
+      put 'publish_all'
+      put 'unpublish_all'
+    end
+   resources :reviews
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
